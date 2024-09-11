@@ -110,8 +110,8 @@ const Slide = ({ title, price, image }: SlideProps) => {
 export const Mainpage = () => {
     const Slides: SlideProps[] = [
         { title: "Hoodie", price: 1200000, image: "/slider.png" },
-        // { title: "Hat", price: 1200000, image: "/hat.png" },
-        // { title: "magazine", price: 1200000, image: "/magazine.png" },
+        { title: "Hoodie", price: 1200000, image: "/hoodie4.png" },
+        { title: "magazine", price: 1200000, image: "/hoodie2.png" },
         // // Add more slides as needed
     ];
 
@@ -131,7 +131,7 @@ export const Mainpage = () => {
                 <div
                     className="slides flex"
                     style={{
-                        transform: `translateX(-${(slideIndex * 100) / Slides.length}%)`,
+                        transform: `translateX(-${(slideIndex * 100) / 3})`,
                         transition: "transform 0.5s ease-in-out",
                     }}
                 >
