@@ -1,5 +1,6 @@
 "use client"
 
+import { SetStateAction } from "react"
 import ItemCard from "./ItemCard"
 import { card } from "./utils/card"
 
@@ -14,13 +15,14 @@ export const Relateditems = () => {
                     <div key={index}
                         className={`${index === 6 || index === 7 ? " " : ""}`}>
                         <ItemCard
-                            image={item.image}
+                            image={item.image[0]}
                             title={item.title}
                             price={item.price}
                             discount={item.discount || undefined}
                             className="h-full"
-                            imageClassName={`${index === 6 || index === 7 ? "h-[330px]" : "h-[330px]"} object-cover`}
-                        />
+                            imageClassName={`${index === 6 || index === 7 ? "h-[330px]" : "h-[330px]"} object-cover`} id={""} savedItems={[]} setSavedItems={function (value: SetStateAction<any[]>): void {
+                                throw new Error("Function not implemented.")
+                            }} />
                     </div>
                 ))}
             </div>

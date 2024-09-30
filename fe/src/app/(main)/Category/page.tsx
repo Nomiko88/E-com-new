@@ -5,6 +5,7 @@
 import ItemCard from "@/components/ItemCard";
 import { Checkbox } from "@/components/ui/checkbox"
 import { card } from "@/components/utils/card";
+import { SetStateAction } from "react";
 
 
 interface Category {
@@ -35,7 +36,7 @@ const categories: Category[] = [
 
 export default function Home() {
     return (
-        <div className="flex gap-5 px-[200px] py-[52px]">
+        <div className="flex gap-5 px-[200px] py-[52px] w-[1440px] m-auto">
             <div className="w-[245px] h-[512px] border flex flex-col gap-11 px-1">
                 <div className="flex flex-col gap-4">
                     <h1>Ангилал</h1>
@@ -71,14 +72,16 @@ export default function Home() {
             <div className="grid grid-cols-3 grid-rows-5 gap-x-5 gap-y-10 h-[2147px] w-[774px]">
                 {card.slice(1, 16).map((item, index) => (
                     <div key={index}
-                        className={`${index === 6 || index === 7 ? " " : ""}`}>
+                        className="h-[330px]">
                         <ItemCard
-                            image={item.image}
+                            image={item.image[0]}
                             title={item.title}
                             price={item.price}
                             discount={item.discount || undefined}
                             className="h-full"
-                            imageClassName={`${index === 6 || index === 7 ? "h-[330px]" : "h-[330px]"} object-cover`}
+                            imageClassName={`object-cover`} id={""} savedItems={[]} setSavedItems={function (value: SetStateAction<any[]>): void {
+                                throw new Error("Function not implemented.");
+                            }}
                         />
                     </div>
                 ))}

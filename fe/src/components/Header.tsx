@@ -57,10 +57,10 @@ export default function Header() {
             </div>
             <div className="flex gap-4 h-9 justify-center items-center">
                 <LuShoppingCart className="text-white text-xl" />
-                <IoMdHeartEmpty className="text-white text-xl" />
+                <button id="saved-items-btn">❤️ Saved Items (<span id="saved-count">0</span>)</button>
 
-                <button className="border-[#2563eb] text-white rounded-md px-3 py-2 w-">Login</button>
-                <button className="border-[#2563EB] text-white rounded-md px-3 py-2">Register</button>
+                <button className="border border-[#2563EB] text-white rounded-3xl px-3 py-2 w-">Login</button>
+                <button className="border border-[#2563EB] text-white rounded-3xl px-3 py-2">Register</button>
             </div>
         </div>
     );
