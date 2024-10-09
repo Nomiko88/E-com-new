@@ -69,22 +69,26 @@ export default function Home() {
 
                 </div>
             </div>
-            <div className="grid grid-cols-3 grid-rows-5 gap-x-5 gap-y-10 h-[2147px] w-[774px]">
-                {card.slice(1, 16).map((item, index) => (
-                    <div key={index}
-                        className="h-[330px]">
-                        <ItemCard
-                            image={item.image[0]}
-                            title={item.title}
-                            price={item.price}
-                            discount={item.discount || undefined}
-                            className="h-full"
-                            imageClassName={`object-cover`} id={""} savedItems={[]} setSavedItems={function (value: SetStateAction<any[]>): void {
-                                throw new Error("Function not implemented.");
-                            }}
-                        />
-                    </div>
-                ))}
+            <div className="grid grid-cols-3 grid-rows-5 gap-x-5 gap-y-10 ">
+                {card.slice(1, 16).map((item, index) => {
+                    return (
+                        <div
+                            key={index}
+                            className="relative h-[330px] w-[244px]">
+                            <ItemCard
+                                image={item.image[0]}
+                                title={item.title}
+                                price={item.price}
+                                discount={item.discount || undefined}
+                                className="h-full"
+                                imageClassName={`object-cover`} id={""} savedItems={[]} setSavedItems={function (value: SetStateAction<any[]>): void {
+                                    throw new Error("Function not implemented.");
+                                }}
+                            />
+                        </div>
+                    )
+                }
+                )}
             </div>
         </div>
     );

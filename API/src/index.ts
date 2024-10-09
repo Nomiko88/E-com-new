@@ -1,14 +1,21 @@
 import express from "express";
 import cors from "cors";
+import categoryRouter from "./routes/category.route";
+import { connectToDatabase } from "./database";
+
 const app = express();
+const port = 5555;
+
+connectToDatabase()
 app.use(cors());
 app.use(express.json());
 
 app.get("/", (_req, res) => {
-    res.json({ message: "smile" })
+    res.json({ message: "smile shajhsjahs" });
 });
 
-app.listen(5555, () => {
-    console.log("Server is running on http://localhost:5555")
-});
+app.use(categoryRouter);
 
+app.listen(port, () => {
+    console.log(`Сервер ${port} порт дээр ажиллаж байна`);
+});
