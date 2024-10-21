@@ -1,14 +1,14 @@
 "use client"
-import { FaDollarSign } from "react-icons/fa";
+import { FaRegClipboard } from "react-icons/fa";
 export default function () {
     return (
         <div className="h-[136px] w-[573px] rounded-lg bg-white border">
             <div className="flex justify-start">
-                <FaDollarSign />
-                <p>Орлого</p>
+                <FaRegClipboard />
+                <p>Захиалга</p>
             </div>
             <div className="flex flex-col gap-4 justify-start">
-                <p className="text-large font-bold"> total sales ₮</p>
+                <p className="text-large font-bold"> total order</p>
                 <p>Date</p>
             </div>
         </div>

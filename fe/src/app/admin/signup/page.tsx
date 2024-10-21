@@ -41,7 +41,7 @@ export function InputForm() {
             title: "Signed in to Pincecone with ",
             description: (
                 <pre className="mt-2 w-[376px] rounded-md border border-spacing-1 p-4">
-                    <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                    <code className="text-gray-500 text-sm">{JSON.stringify(data, null, 2)}</code>
                 </pre>
             ),
         });

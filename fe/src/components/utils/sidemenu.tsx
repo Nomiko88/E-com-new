@@ -7,7 +7,7 @@ import { IoMdSettings } from "react-icons/io";
 export default function () {
     return (
         <div>
-            <div className="h-[976px] w-[222px] mt-8 flex flex-col">
+            <div className="h-[976px] w-[222px]  flex flex-col bg-white">
                 <div className="flex gap-4 items-center p-4">
                     <PiSquaresFourFill className="w-6 h-6" />
                     <p>Хяналтын самбар</p>
